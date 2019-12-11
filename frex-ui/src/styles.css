@@ -1,0 +1,66 @@
+
+@import '~animate.css/animate.min';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.height-40{
+  height: 40px;
+}
+
+.quicksand{
+  font-family: 'Quicksand', sans-serif;
+}
+.radius-20{
+  border-radius: 20px;
+}
+.margin-10{
+  margin-right: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4A148C;
+  /*background-image: linear-gradient(to bottom right, #311B92, #4A148C);*/
+  outline: 1px solid slategrey;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*TODO put this in your component*/
+.imagebox {
+  background: black;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.imagebox img {
+  opacity: 1;
+  transition: 0.5s opacity;
+}
+.imagebox .imagebox-desc {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  color: white;
+  font-size: 1.2em;
+  left: 0;
+  padding: 10px 15px;
+  position: absolute;
+  transition: 0.5s padding;
+  text-align: center;
+  width: 100%;
+}
+.imagebox:hover img {
+  opacity: 0.7;
+}
+.imagebox:hover .imagebox-desc {
+  padding-bottom: 10%;
+}

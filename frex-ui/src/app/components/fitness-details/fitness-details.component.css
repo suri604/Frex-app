@@ -1,0 +1,37 @@
+.card-padding{
+  padding: 30px;
+}
+.back{
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #673ab7;
+  background-image: linear-gradient(to bottom right, #673AB7, #9C27B0);
+}
+.card-border{
+  padding: 0 !important;
+  border-radius: 20px;
+}
+.horizontal-bar{
+  padding-left:3px;
+  width: 47px;
+  border-radius: 20px 0 0 20px;
+}
+.body-details{
+  background-color: #cfd8dc;
+  border-radius: 20px;
+}
+.no-outline{
+  outline: none;
+}
+.round-20{
+  border-radius: 20px;
+}
+.avatar{
+  height: 40px;
+  margin: auto;
+  border-radius: 50%;
+}

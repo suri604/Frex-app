@@ -1,0 +1,19 @@
+.outer{
+    border-radius: 30px;
+    background: white;
+    margin-left: 20%;
+    min-width: 300px;
+    /* margin:5vw 0 0 8vw; */
+    margin-top: 50px;
+    margin-right: 20%;
+    float:left;
+    width:60%;
+    padding:3vw;
+    /* height:37vw; */
+    /* background: black; */
+    box-shadow: 3px 3px 8px 5px #888888;
+  }
+  
+  td{
+      margin-left: 10px;
+  }

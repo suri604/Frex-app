@@ -1,0 +1,66 @@
+<p>photolist works!</p>
+
+<div class="container">
+  <!-- <div class="row"> -->
+  <a routerLink="/image/upload">
+    <img src="../../../../assets/new_image.jpg" class="img-fluid">
+    <span class="imagebox-desc">Insert New Image</span></a>
+  <p> hwllo thwe {{photolength}}</p>
+  <!-- {{rowIndexArray}} -->
+
+
+
+
+<div class="card-group">
+    <div *ngFor="let i of imageList| async">    
+      <div class="card lg-12 sm-6 " style="width: 18rem; margin: 2rem;" >
+          <img class="card-img-top" [src]="i.imageUrl" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">{{i.caption}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+
+
+
+<!-- <table *ngIf="imageList">
+    <tr *ngFor="let i of rowIndexArray">
+      <td>
+        <div class="card text-left imagebox" *ngIf="i!=0">
+          <img class="card-img-top" src="imageList[3*i-1].imageUrl" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Body</p>
+          </div>
+        </div>
+        <div class="card" *ngIf="i==0">
+          <a routerLink="/image/upload">
+            <img src="/assets/img/new_image.jpg" class="img-fluid">
+            <span class="imagebox-desc">Insert New Image</span></a>
+        </div>
+        <div class="card" *ngIf="i!=0">
+          <img [src]="imageList[3*i-1].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i-1].caption}}</span>
+        </div>
+      </td>
+      <td *ngIf="imageList[3*i]">
+        <div class="card">
+          <img [src]="imageList[3*i].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i].caption}}</span>
+        </div>
+      </td>
+      <td *ngIf="imageList[3*i+1]">
+        <div class="card">
+          <img [src]="imageList[3*i+1].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[3*i+1].caption}}</span>
+        </div>
+      </td>
+    </tr>
+  </table> -->
+<!-- <img src="{{imageList[2].imageUrl}}" alt="">; -->

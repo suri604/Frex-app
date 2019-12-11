@@ -1,0 +1,44 @@
+<!--Navbar-->
+<mdb-navbar class="sticky-top fixed-top" id="sticky-navigation" SideClass="navbar navbar-expand-lg  "
+  [containerInside]="false">
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">Frex</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto nav ">
+      <!-- Dropdown -->
+      <li class="nav-item dropdown " dropdown>
+        <a  *ngIf="logged" color="primary"  dropdownToggle mdbWavesEffect type="button"
+          class="nav-link dropdown-toggle waves-light" mdbWavesEffect><i class="fa fa-user-circle"></i>
+          <mdb-icon far icon=""></mdb-icon>{{ username }}<span class="caret"></span>
+        </a>
+        
+          <a  *ngIf="notlogged" dropdownToggle mdbWavesEffect type="button"
+            class="nav-link dropdown-toggle waves-light waves-effect waves-light btn" t><i
+              class="fa fa-user-circle"></i> Profile<span class="caret"></span></a>
+        
+
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+         <div>
+          <a *ngIf="logged" class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+         
+            <a  *ngIf="notlogged" class="dropdown-item waves-light" mdbWavesEffect (click)="loginpopup()">Login</a>
+        
+          </div>
+
+          <a *ngIf="logged" class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">Log out</a>
+
+         
+          
+             <a  *ngIf="notlogged" class="dropdown-item waves-light" mdbWavesEffect (click)="open()">Sign up</a>
+         
+
+        </div>
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>

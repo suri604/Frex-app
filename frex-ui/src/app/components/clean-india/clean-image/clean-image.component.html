@@ -1,0 +1,28 @@
+<div *ngIf="imageList">
+  <div class="row">
+       <div *ngFor="let i of rowIndexArray" class="col-4">
+         <div class="h-100" style="padding: 10px">
+           <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" *ngIf="i==0">
+             <a routerLink="/cleanindia/upload" style="text-decoration: none"><img class="img-fluid card-img" src="../../../../assets/upload.jpg">
+             <div class="row flex-grow-1 fill-remaining-space"></div>
+             <div class="mat-h3 quicksand margin-10" style="text-align: center">Insert new Image</div></a>
+           </mat-card>
+            <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" *ngIf="i!=0">
+                   <img class="img-fluid card-img" [src]="imageList[i].imageUrl"> 
+                   <div class="row flex-grow-1 fill-remaining-space"></div>
+                   <h4>Name</h4>
+                   <div class="mat-h3 quicksand margin-10">{{imageList[i].name}}</div>
+                   <h4>Description</h4>
+                   <div class="mat-h3 quicksand margin-10">{{imageList[i].description}}</div>
+                   <div class="form-group">
+                    <div class="col-md-12">
+                     <a routerLink="/environment/main/save/envcategory" class="btn btn-primary btn-block float-right">Donate your Points</a>
+                   </div>
+                   </div>
+           </mat-card> 
+           
+           
+         </div>
+       </div>
+     </div> 
+     </div>

@@ -1,0 +1,21 @@
+<p>feed works!</p>
+
+  
+  
+
+  <div class="card-group">
+      <div *ngFor="let i of imageList">    
+        <div class="card lg-12 sm-6 " style="width: 18rem; margin: 2rem;" >
+            <img class="card-img-top" [src]="i.imageUrl" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">{{i.caption}} {{i.like}}</p>
+              <button class="btn btn-success" (click)="like(i.key,i.like)">Like</button>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          
+      </div>
+    </div>

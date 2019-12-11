@@ -1,0 +1,54 @@
+<h2>Filters</h2>
+<h4>Category</h4>
+
+<select [(ngModel)]="category" (change)="filterExact('category', category)">
+  <option value="PublicHealth">Public Health</option>
+  <option value="ChildrenElderlyAndDisabled">Children,Elderly and Disabled</option>
+  <option value="TrainingResearchAndEnvironment">Training,Reasearch and Environment</option>
+  <option value="PoliticalAndHistorical">Political and Historical</option>
+<!--  <option value="bird"></option>-->
+<!--  <option value="mammal">Mammal</option>-->
+<!--  <option value="fish">Fish</option>-->
+</select>
+
+<button *ngIf="category"
+        (click)="removeFilter('category')">
+
+  Remove filter
+</button>
+
+<!--<h4>Weight Greater Than</h4>-->
+
+<!--<input type="number"-->
+<!--       [(ngModel)]="weight"-->
+<!--       (change)="filterGreaterThan('weight', weight)">-->
+
+<!--<button *ngIf="weight"-->
+<!--        (click)="removeFilter('weight')">-->
+
+<!--  Remove filter-->
+<!--</button>-->
+
+<!--<h4>Endangered Species</h4>-->
+
+<!--<input type="checkbox"-->
+<!--       [(ngModel)]="endangered"-->
+<!--       (change)="filterBoolean('endangered', endangered)">-->
+
+<!--Endangered?-->
+
+<h2>Certificateeess</h2>
+<div>{{filteredCategories.length}}</div>
+<div *ngFor="let category of filteredCategories">
+  <h6>{{category.category}}</h6>
+
+
+      <div class="imagebox">
+        <img [src]="category.certificateUrl" class="img-fluid">
+        <span class="imagebox-desc">{{category.caption}}</span>
+      </div>
+<!--  <img [src]="category.certificateUrl">-->
+  <ul>
+    <li>Category: {{category.category}}</li>
+  </ul>
+</div>
